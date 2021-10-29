@@ -4,7 +4,7 @@
   "slug": "ha-openvpn",
   "description": "OpenVPN server",
   "arch": ["amd64"],
-  "url": "https://hub.docker.com/r/kylemanna/openvpn",
+  "url": "https://github.com/psyipm/home-assistant-addons/tree/main/ha-openvpn",
   "startup": "application",
   "boot": "auto",
   "ports": {
