@@ -1,0 +1,14 @@
+{
+  "name": "HA-OpenVPN",
+  "version": "0.0.4",
+  "slug": "ha-openvpn",
+  "description": "OpenVPN server",
+  "arch": ["amd64"],
+  "url": "https://hub.docker.com/r/kylemanna/openvpn",
+  "startup": "application",
+  "boot": "auto",
+  "ports": {
+    "1194/udp": 1194
+  },
+  "privileged": ["NET_ADMIN"]
+}
