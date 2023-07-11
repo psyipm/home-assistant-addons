@@ -10,6 +10,6 @@ ovpn_genconfig -u udp://$SERVER_NAME
 echo "Running `init_pki`..."
 ovpn_initpki
 
-mv /etc/openvpn/pki $OPENVPN/pki
+mv /etc/openvpn/pki $OPENVPN/
 
 echo "Done. Please restart the addon and generate a client"
