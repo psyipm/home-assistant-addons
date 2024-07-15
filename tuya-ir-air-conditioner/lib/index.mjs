@@ -16,7 +16,7 @@ const mqttClient = new MQTTClient({
 async function publishState() {
   state = await airConditioner.queryDeviceStatus();
 
-  log(state)
+  log(JSON.stringify(state))
 
   Object.keys(state).forEach(key => {
     if (key === "mode" && state.power === "off") {

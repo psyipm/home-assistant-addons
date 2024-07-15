@@ -1,7 +1,5 @@
 const log = (message) => {
-  console.log(`${new Date().toISOString()}: ${info}`)
+  console.log(`${new Date().toISOString()}: ${message}`)
 };
 
-export default {
-  log
-};
+export { log };
