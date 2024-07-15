@@ -1,0 +1,45 @@
+name: "Hello world"
+description: "My first real add-on!"
+version: "1.0.10"
+slug: "hello_world"
+init: false
+arch:
+  - aarch64
+  - amd64
+  - armhf
+  - armv7
+  - i386
+options:
+  tuya:
+    base_url: "https://openapi.tuyaeu.com"
+    access_key: "Access key from Tuya IoT platform"
+    secret_key: "Secret key from Tuya IoT platform"
+  device:
+    ir_gateway_id: "IR gateway device ID from Tuya IoT platform"
+    ac_device_id: "Air Conditioner device ID from Tuya IoT platform"
+  mqtt:
+    server_url: "mqtt://localhost:1883"
+    username: mqtt
+    password: mqtt
+  mqtt_topics:
+    power: "smarthome/bedroom/ac/power"
+    mode: "smarthome/bedroom/ac/mode"
+    temperature: "smarthome/bedroom/ac/temperature"
+    fan: "smarthome/bedroom/ac/fan"
+schema:
+  tuya:
+    base_url: str
+    access_key: str
+    secret_key: str
+  device:
+    ir_gateway_id: str
+    ac_device_id: str
+  mqtt:
+    server_url: str
+    username: str
+    password: str
+  mqtt_topics:
+    power: str
+    mode: str
+    temperature: str
+    fan: str
