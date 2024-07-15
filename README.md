@@ -9,6 +9,7 @@ Add-on documentation: <https://developers.home-assistant.io/docs/add-ons>
 This repository contains the following add-ons
 
 ### [OpenVPN](./ha-openvpn)
+### [Tuya IR AirConditioner](./tuya-ir-air-conditioner)
 
 ![Supports amd64 Architecture][amd64-shield]
 

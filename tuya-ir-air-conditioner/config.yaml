@@ -1,7 +1,7 @@
-name: "Hello world"
-description: "My first real add-on!"
+name: "Tuya IR AirConditioner"
+description: "This add-on allows to integrate an Air Conditioner, that is controlled by a Tuya Smart IR gateway into HomeAssistant and use it as a MQTT HVAC."
 version: "1.0.10"
-slug: "hello_world"
+slug: "tuya-ir-air-conditioner"
 init: false
 arch:
   - aarch64
