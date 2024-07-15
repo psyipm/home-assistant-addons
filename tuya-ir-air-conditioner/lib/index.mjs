@@ -1,6 +1,7 @@
 import { DeviceConfig } from "./config.mjs";
 import { AirConditioner } from "./air_conditioner.mjs";
 import { MQTTClient } from "./mqtt_client.mjs";
+import { log } from "./logger.mjs";
 import process from "process";
 
 const airConditioner = new AirConditioner(DeviceConfig);
@@ -15,7 +16,7 @@ const mqttClient = new MQTTClient({
 async function publishState() {
   state = await airConditioner.queryDeviceStatus();
 
-  console.log(state)
+  log(state)
 
   Object.keys(state).forEach(key => {
     if (key === "mode" && state.power === "off") {
@@ -31,16 +32,11 @@ async function handleMessage(topic, message) {
   const value = message.toString();
 
   if ((state.power === "off" && ![ "power", "mode" ].includes(topicName))) {
-    console.log("Device is off, ignoring message");
+    log("Device is off, ignoring message");
     return;
   }
 
-  // if (state[topicName] == value) {
-  //   console.log("Value is already set, ignoring message");
-  //   return;
-  // }
-
-  console.log(`Setting ${topicName} to ${value}`);
+  log(`Setting ${topicName} to ${value}`);
 
   try {
     switch (topicName) {
@@ -66,7 +62,7 @@ async function handleMessage(topic, message) {
 
 ["SIGINT", "SIGTERM"].map((signal) => {
   process.on(signal, () => {
-    console.log(`Received ${signal}, exiting`);
+    log(`Received ${signal}, exiting`);
     mqttClient.client.end();
   })
 })

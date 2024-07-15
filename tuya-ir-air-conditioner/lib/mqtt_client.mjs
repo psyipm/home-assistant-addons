@@ -20,8 +20,6 @@ class MQTTClient {
   }
 
   publishState(name, value) {
-    // console.log(`Publishing ${name} with value ${value}`)
-
     const topic = MQTTTopics[name];
     if (!topic) {
       throw new Error(`Name ${name} not found`);
