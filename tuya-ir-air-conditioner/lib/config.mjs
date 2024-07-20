@@ -20,9 +20,8 @@ const MQTTConfig = {
 const MQTTTopics = {
   "power": process.env.MQTT_POWER_TOPIC,
   "mode": process.env.MQTT_MODE_TOPIC,
-  "temperature": process.env.MQTT_FAN_TOPIC,
-  "fan": process.env.MQTT_TEMPERATURE_TOPIC,
+  "fan": process.env.MQTT_FAN_TOPIC,
+  "temperature": process.env.MQTT_TEMPERATURE_TOPIC,
 };
-
 
 export { TuyaConfig, DeviceConfig, MQTTConfig, MQTTTopics };
