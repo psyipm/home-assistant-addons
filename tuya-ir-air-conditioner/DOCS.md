@@ -66,7 +66,7 @@ code: 28841002,
     ir_gateway_id: "IR gateway device ID from Tuya IoT platform"
     ac_device_id: "Air Conditioner device ID from Tuya IoT platform"
   mqtt:
-    server_url: "mqtt://homeassistant.local:1883"
+    host: "homeassistant.local:1883"
     username: mqtt
     password: mqtt
   mqtt_topics:

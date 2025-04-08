@@ -1,6 +1,6 @@
 name: "Tuya IR AirConditioner"
 description: "This add-on allows to integrate an Air Conditioner, that is controlled by a Tuya Smart IR gateway into HomeAssistant and use it as a MQTT HVAC."
-version: "1.0.14"
+version: "1.0.15"
 slug: "tuya-ir-air-conditioner"
 init: false
 services:
@@ -19,10 +19,7 @@ options:
   device:
     ir_gateway_id: "IR gateway device ID from Tuya IoT platform"
     ac_device_id: "Air Conditioner device ID from Tuya IoT platform"
-  mqtt:
-    server_url: "mqtt://homeassistant.local:1883"
-    username: mqtt
-    password: mqtt
+  mqtt: {}
   mqtt_topics:
     power: "smarthome/bedroom/ac/power"
     mode: "smarthome/bedroom/ac/mode"
@@ -37,7 +34,7 @@ schema:
     ir_gateway_id: str
     ac_device_id: str
   mqtt:
-    server: "str?"
+    host: "str?"
     ca: "str?"
     key: "str?"
     cert: "str?"
