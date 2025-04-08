@@ -12,7 +12,7 @@ const DeviceConfig = {
 }
 
 const MQTTConfig = {
-  url: process.env.MQTT_SERVER_URL,
+  url: `mqtt://${process.env.MQTT_SERVER_URL}`,
   username: process.env.MQTT_USERNAME,
   password: process.env.MQTT_PASSWORD,
 };
