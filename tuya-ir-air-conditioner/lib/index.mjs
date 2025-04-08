@@ -29,7 +29,7 @@ async function publishState() {
 
 async function handleMessage(topic, message) {
   const [topicName, _action] = topic.split("/").slice(-2); // eslint-disable-line no-unused-vars
-  const value = message.toString();
+  const value = message.toString().toLowerCase();
 
   if ((state.power === "off" && ![ "power", "mode" ].includes(topicName))) {
     log("Device is off, ignoring message");
